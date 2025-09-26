@@ -5,14 +5,12 @@ import AppRoutes from "./routes/AppRoutes";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
-/**
- * Main layout component that wraps authenticated routes
- */
+
 const AppLayout = () => {
   const { isAuthenticated } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Don't show layout for unauthenticated users
+
   if (!isAuthenticated()) {
     return (
       <div
@@ -35,7 +33,7 @@ const AppLayout = () => {
         dark:from-gray-950 dark:via-gray-900 dark:to-black
         transition-colors duration-500 gap-y-3"
     >
-      {/* Navbar */}
+    
       <div
         className="sticky top-0 z-50 shadow-md 
         bg-white/80 dark:bg-gray-900/80 
@@ -71,9 +69,6 @@ const AppLayout = () => {
   );
 };
 
-/**
- * Root App component
- */
 const App = () => {
   return (
     <Router>

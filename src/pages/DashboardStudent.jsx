@@ -92,7 +92,7 @@ const DashboardStudent = () => {
   }
 
   return (
-    <div className="space-y-6 mr-5">
+    <div className="space-y-6 ">
       {/* Welcome header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">

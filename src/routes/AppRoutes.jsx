@@ -11,10 +11,6 @@ import DashboardAdmin from '../pages/DashboardAdmin';
 import ChatAssistant from '../pages/ChatAssistant';
 import Wellness from '../pages/Wellness';
 
-/**
- * Protected route wrapper
- * Redirects to login if user is not authenticated
- */
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
 

@@ -5,9 +5,7 @@ import { signupUser } from '../services/authService';
 import InputField from '../components/InputField';
 import { Heart, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react';
 
-/**
- * Student registration page
- */
+
 const Signup = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
