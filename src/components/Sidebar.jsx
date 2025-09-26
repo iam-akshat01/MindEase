@@ -65,16 +65,18 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-50
+        fixed top-0 left-0 h-full w-64 
+        bg-gradient-to-b from-cyan-500 via-blue-600 to-indigo-700 text-white
+        z-50 shadow-xl
         transform transition-transform duration-300 ease-in-out
-        lg:relative lg:transform-none
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-      `}>
+        lg:relative lg:transform-none rounded-2xl 
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 '}
+       `}>
         {/* Mobile close button */}
         <div className="lg:hidden flex justify-end p-4">
           <button
             onClick={onClose}
-            className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg"
+            className="p-2 text-white hover:bg-white/20 rounded-lg transition-colors"
           >
             <X size={20} />
           </button>
@@ -95,8 +97,8 @@ const Sidebar = ({ isOpen, onClose }) => {
                     w-full flex items-center space-x-3 px-4 py-3 rounded-lg
                     text-left transition-colors duration-200
                     ${isActive 
-                      ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700' 
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                      ? 'bg-white/20 text-white font-semibold' 
+                      : 'hover:bg-white/10 text-white/80 hover:text-white'
                     }
                   `}
                 >
@@ -108,9 +110,9 @@ const Sidebar = ({ isOpen, onClose }) => {
           </div>
 
           {/* Role indicator */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="px-4 py-2 bg-gray-50 rounded-lg">
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+          <div className="mt-8 pt-6 border-t border-white/20">
+            <div className="px-4 py-2 bg-white/10 rounded-lg">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">
                 {userRole} Portal
               </p>
             </div>
